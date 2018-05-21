@@ -12,7 +12,6 @@
 #include <unistd.h>
 #include <time.h>
 #include <stdlib.h>
-#include <math.h>
 
 #define SIZE 1024
 
@@ -160,11 +159,22 @@ void printM(__uint64_t M[][SIZE])
 	}
 }
 
+double power(int base, int exp)
+{
+	int i;
+	double res=1;
+	for (i = 0; i < exp; i++)
+	{
+		res=res*base;
+	}
+	return res;
+}
+
 int main(int argc, char *argv)
 {
-	clock_t t;
+    clock_t t;
 	double time_takenBase, time_takenTrans, time_takenTiling, time_takenTileTrans;
-	double x;
+	int x;
 	int Tile;
 
 	init(A, B);
@@ -192,7 +202,7 @@ int main(int argc, char *argv)
     printf("\n--------------------------------------------------------------------------------------------------\n");
     for (x = 0; x <= 10; x++)
     {
-        Tile=(int) pow(2, x);
+        Tile=(int) power(2, x);
         t = clock();
         matmulTiling(A, B, Tile);
         t = clock() - t;
@@ -205,7 +215,7 @@ int main(int argc, char *argv)
     printf("\n--------------------------------------------------------------------------------------------------\n");
     for (x = 0; x <= 10; x++)
     {
-        Tile=(int) pow(2, x);
+        Tile=(int) power(2, x);
         t = clock();
         matmulTileTrans(A, T, Tile);
         t = clock() - t;
