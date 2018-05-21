@@ -1,0 +1,9 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=E08BB1E2
+eax=00000080 ebx=0062CC3C ecx=00000477 edx=00000000 esi=2007224B edi=2007223D
+ebp=0062CC18 esp=0062CB9C program=C:\Users\Carlos Isaac\GitHub\C\Matrix_Mul\bin\Debug\Matrix_Mul.exe, pid 1476, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0062CC18  E08BB1E2 (00000001, 0062CC3C, 200280F0, 61007A02)
+0062CD18  61007A67 (00000000, 0062CD74, 61006A60, 00000000)
+End of stack trace

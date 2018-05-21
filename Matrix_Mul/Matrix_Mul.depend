@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1526887928 source:c:\users\carlos isaac\github\c\matrix_mul\main.c
+	<string.h>
+	<stdio.h>
+	<unistd.h>
+	<time.h>
+	<stdlib.h>
+	<math.h>
+
